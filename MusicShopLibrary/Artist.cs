@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicShopLibrary
 {
-    public class Class1
+    class Vendor
     {
     }
 }
