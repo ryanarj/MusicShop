@@ -7,3 +7,5 @@ C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\
 C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.csproj.GenerateResource.Cache
 C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.exe
 C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.pdb
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShopLibrary.dll
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShopLibrary.pdb

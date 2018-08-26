@@ -11,6 +11,10 @@ namespace MusicShopLibrary
         public string Name{ get; set; }
         public List<Artist> Artists { get; set; }
         public List<Item> Items { get; set; }
-    
+        public Store()
+        {
+            Artists = new List<Artist>();
+            Items = new List<Item>();
+        }
     }
 }

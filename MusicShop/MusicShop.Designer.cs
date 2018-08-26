@@ -49,7 +49,7 @@
             // 
             // musicRecordListBox
             // 
-            this.musicRecordListBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.musicRecordListBox.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.musicRecordListBox.FormattingEnabled = true;
             this.musicRecordListBox.ItemHeight = 20;
             this.musicRecordListBox.Location = new System.Drawing.Point(17, 92);
@@ -69,12 +69,13 @@
             // 
             // addToCartButton
             // 
+            this.addToCartButton.BackColor = System.Drawing.SystemColors.InfoText;
             this.addToCartButton.Location = new System.Drawing.Point(343, 133);
             this.addToCartButton.Name = "addToCartButton";
             this.addToCartButton.Size = new System.Drawing.Size(125, 29);
             this.addToCartButton.TabIndex = 3;
             this.addToCartButton.Text = "Add to cart -->";
-            this.addToCartButton.UseVisualStyleBackColor = true;
+            this.addToCartButton.UseVisualStyleBackColor = false;
             // 
             // shoppingCartLabel
             // 
@@ -88,7 +89,7 @@
             // 
             // shoppingCartListBox
             // 
-            this.shoppingCartListBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.shoppingCartListBox.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.shoppingCartListBox.FormattingEnabled = true;
             this.shoppingCartListBox.ItemHeight = 20;
             this.shoppingCartListBox.Location = new System.Drawing.Point(502, 92);
@@ -98,18 +99,19 @@
             // 
             // purchaseButton
             // 
+            this.purchaseButton.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.purchaseButton.Location = new System.Drawing.Point(343, 168);
             this.purchaseButton.Name = "purchaseButton";
             this.purchaseButton.Size = new System.Drawing.Size(125, 29);
             this.purchaseButton.TabIndex = 6;
             this.purchaseButton.Text = "Purchase";
-            this.purchaseButton.UseVisualStyleBackColor = true;
+            this.purchaseButton.UseVisualStyleBackColor = false;
             // 
             // MusicShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(813, 274);
             this.Controls.Add(this.purchaseButton);
             this.Controls.Add(this.shoppingCartLabel);
@@ -119,6 +121,7 @@
             this.Controls.Add(this.musicRecordListBox);
             this.Controls.Add(this.headerText);
             this.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MusicShop";
             this.Text = "Music Shop";

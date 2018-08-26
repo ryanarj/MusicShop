@@ -1,0 +1,5 @@
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShopLibrary\bin\Debug\MusicShopLibrary.dll
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShopLibrary\bin\Debug\MusicShopLibrary.pdb
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShopLibrary\obj\Debug\MusicShopLibrary.csprojResolveAssemblyReference.cache
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShopLibrary\obj\Debug\MusicShopLibrary.dll
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShopLibrary\obj\Debug\MusicShopLibrary.pdb
