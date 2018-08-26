@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MusicShopLibrary
 {
-    class Vendor
+    public class Artist
     {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int records { get; set; }
     }
 }
