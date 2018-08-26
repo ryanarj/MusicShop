@@ -11,5 +11,12 @@ namespace MusicShopLibrary
         public string firstName { get; set; }
         public string lastName { get; set; }
         public int records { get; set; }
+
+        public Artist()
+        {
+            records = 1;
+        }
     }
+
+
 }

@@ -1,1 +1,9 @@
 c:\users\kr\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShop.exe.config
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShop.exe
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShop.pdb
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.csprojResolveAssemblyReference.cache
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.MusicShop.resources
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.Properties.Resources.resources
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.csproj.GenerateResource.Cache
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.exe
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.pdb
