@@ -107,6 +107,7 @@
             this.purchaseButton.TabIndex = 6;
             this.purchaseButton.Text = "Purchase";
             this.purchaseButton.UseVisualStyleBackColor = false;
+            this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
             // 
             // MusicShop
             // 

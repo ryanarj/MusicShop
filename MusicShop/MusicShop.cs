@@ -59,5 +59,15 @@ namespace MusicShop
             shopCartData.Add(selectedItem);
             cartBinding.ResetBindings(false);
         }
+
+        private void purchaseButton_Click(object sender, EventArgs e)
+        {
+            foreach (Item item in shopCartData)
+            {
+                item.Sold = true;
+            }
+            shopCartData.Clear();
+            cartBinding.ResetBindings(false);
+        }
     }
 }

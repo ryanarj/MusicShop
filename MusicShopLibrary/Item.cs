@@ -12,6 +12,7 @@ namespace MusicShopLibrary
         public string Description { get; set; }
         public decimal Price { get; set; }
         public Artist Artist { get; set; }
+        public bool Sold { get; set; }
 
         public string Display
         {
