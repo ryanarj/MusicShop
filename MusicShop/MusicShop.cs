@@ -24,7 +24,7 @@ namespace MusicShop
             SetupData();
 
             // Grab the items and place them into the list box
-            itemsBinding.DataSource = store.Items;
+            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
             musicRecordListBox.DataSource = itemsBinding;
             musicRecordListBox.DisplayMember = "Display";
             musicRecordListBox.ValueMember = "Display";
@@ -67,7 +67,9 @@ namespace MusicShop
                 item.Sold = true;
             }
             shopCartData.Clear();
+            itemsBinding.DataSource = store.Items.Where(x => x.Sold == false).ToList();
             cartBinding.ResetBindings(false);
+            itemsBinding.ResetBindings(false);
         }
     }
 }
