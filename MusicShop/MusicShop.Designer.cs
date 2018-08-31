@@ -35,6 +35,8 @@
             this.shoppingCartLabel = new System.Windows.Forms.Label();
             this.shoppingCartListBox = new System.Windows.Forms.ListBox();
             this.purchaseButton = new System.Windows.Forms.Button();
+            this.musicStoreListBox = new System.Windows.Forms.ListBox();
+            this.musicStoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -109,12 +111,34 @@
             this.purchaseButton.UseVisualStyleBackColor = false;
             this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
             // 
+            // musicStoreListBox
+            // 
+            this.musicStoreListBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.musicStoreListBox.FormattingEnabled = true;
+            this.musicStoreListBox.ItemHeight = 20;
+            this.musicStoreListBox.Location = new System.Drawing.Point(17, 325);
+            this.musicStoreListBox.Name = "musicStoreListBox";
+            this.musicStoreListBox.Size = new System.Drawing.Size(299, 164);
+            this.musicStoreListBox.TabIndex = 7;
+            // 
+            // musicStoreLabel
+            // 
+            this.musicStoreLabel.AutoSize = true;
+            this.musicStoreLabel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.musicStoreLabel.Location = new System.Drawing.Point(13, 303);
+            this.musicStoreLabel.Name = "musicStoreLabel";
+            this.musicStoreLabel.Size = new System.Drawing.Size(109, 19);
+            this.musicStoreLabel.TabIndex = 8;
+            this.musicStoreLabel.Text = "Music Store";
+            // 
             // MusicShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(813, 274);
+            this.ClientSize = new System.Drawing.Size(813, 528);
+            this.Controls.Add(this.musicStoreLabel);
+            this.Controls.Add(this.musicStoreListBox);
             this.Controls.Add(this.purchaseButton);
             this.Controls.Add(this.shoppingCartLabel);
             this.Controls.Add(this.shoppingCartListBox);
@@ -141,6 +165,8 @@
         private System.Windows.Forms.Label shoppingCartLabel;
         private System.Windows.Forms.ListBox shoppingCartListBox;
         private System.Windows.Forms.Button purchaseButton;
+        private System.Windows.Forms.ListBox musicStoreListBox;
+        private System.Windows.Forms.Label musicStoreLabel;
     }
 }
 
