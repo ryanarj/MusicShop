@@ -17,6 +17,7 @@ namespace MusicShop
         private List<Item> shopCartData = new List<Item>();
         BindingSource itemsBinding = new BindingSource();
         BindingSource cartBinding = new BindingSource();
+        BindingSource storeBinding = new BindingSource();
 
         public MusicShop()
         {
@@ -34,6 +35,11 @@ namespace MusicShop
 
             shoppingCartListBox.DisplayMember = "Display";
             shoppingCartListBox.ValueMember = "Display";
+
+            storeBinding.DataSource = store.Artists;
+            musicRecordListBox.DataSource = storeBinding;
+            musicRecordListBox.DisplayMember = "";
+            musicRecordListBox.ValueMember = "";
         }
 
         private void SetupData()
