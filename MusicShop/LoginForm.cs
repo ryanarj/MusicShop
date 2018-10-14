@@ -16,5 +16,11 @@ namespace MusicShop
         {
             InitializeComponent();
         }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            RegistrationForm rf = new RegistrationForm();
+            rf.Show();
+        }
     }
 }
