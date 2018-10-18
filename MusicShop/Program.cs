@@ -16,7 +16,7 @@ namespace MusicShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MusicShop());
+            Application.Run(new LoginForm());
         }
     }
 }

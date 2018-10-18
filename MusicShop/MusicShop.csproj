@@ -93,7 +93,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UsersTable.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -103,6 +102,11 @@
       <Project>{53be5ff8-acd5-40ac-beb8-009d4da8e1f4}</Project>
       <Name>MusicShopLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Users.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
