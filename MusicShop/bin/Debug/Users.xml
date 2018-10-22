@@ -1,8 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <User>
-    <username>Admin</username>
+    <uid>1</uid>
+    <username>admin</username>
     <password>admin</password>
     <isAdmin>1</isAdmin>
+  </User>
+  <User>
+    <uid>1016832885</uid>
+    <username>Test</username>
+    <password>test</password>
+    <isAdmin>0</isAdmin>
   </User>
 </root>
