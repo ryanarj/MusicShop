@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -39,14 +33,7 @@ namespace MusicShop
         {
             listPanel.Add(panelLogin);
             listPanel.Add(panelRegister);
-            listPanel.Add(panelAdminMenu);
-            listPanel.Add(panelAddRecord);
-            listPanel.Add(panelAdminDeleteRecord);
-            foreach(Panel p in listPanel)
-            {
-                p.Visible = false;
-            }
-            panelLogin.Visible = true;
+            listPanel[0].BringToFront();
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
@@ -92,14 +79,6 @@ namespace MusicShop
 
         }
 
-        private void addRecordBtn_Click(object sender, EventArgs e)
-        {
-            foreach (Panel p in listPanel)
-            {
-                p.Visible = false;
-            }
-            panelAddRecord.Visible = true;
-        }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
@@ -113,18 +92,13 @@ namespace MusicShop
 
                 if (nodes[i]["isAdmin"].InnerXml.Trim().Equals("1") && nodes[i]["username"].InnerXml.Trim().Equals(usernameLoginTB.Text.Trim()) && nodes[i]["password"].InnerXml.Trim().Equals(passwordLoginTB.Text.Trim()))
                 {
-                    panelAdminMenu.Visible = true;
+                    AdminForm af = new AdminForm();
+                    af.Show();
+                    this.Hide();
                 }
-                panelAdminMenu.Visible = true;
             }
-            panelAdminMenu.Visible = true;
 
         }
 
-        private void deleteRecordBtn_Click(object sender, EventArgs e)
-        {
-
-            panelAdminDeleteRecord.Visible = true;
-        }
     }
 }

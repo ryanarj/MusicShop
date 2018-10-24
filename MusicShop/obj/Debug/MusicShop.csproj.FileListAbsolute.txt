@@ -10,5 +10,5 @@ C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\
 C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShopLibrary.dll
 C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\bin\Debug\MusicShopLibrary.pdb
 C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.LoginForm.resources
-C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.RegistrationForm.resources
 C:\Users\KR\Documents\Visual Studio 2015\Projects\MusicShop\MusicShop\bin\Debug\Users.xml
+C:\Users\KR\documents\visual studio 2015\Projects\MusicShop\MusicShop\obj\Debug\MusicShop.AdminForm.resources

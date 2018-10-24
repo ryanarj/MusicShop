@@ -12,4 +12,12 @@
     <password>test</password>
     <isAdmin>0</isAdmin>
   </User>
+  <User>
+    <uid>1622037660</uid>
+    <username>
+    </username>
+    <password>
+    </password>
+    <isAdmin>0</isAdmin>
+  </User>
 </root>
