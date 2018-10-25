@@ -20,4 +20,16 @@
     </password>
     <isAdmin>0</isAdmin>
   </User>
+  <User>
+    <uid>75530334</uid>
+    <username>Ryan</username>
+    <password>test</password>
+    <isAdmin>0</isAdmin>
+  </User>
+  <User>
+    <uid>1712488503</uid>
+    <username>Ry</username>
+    <password>test</password>
+    <isAdmin>0</isAdmin>
+  </User>
 </root>

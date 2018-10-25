@@ -6,4 +6,10 @@
     <price>10.00</price>
     <recId>1023573521</recId>
   </Record>
+  <Record>
+    <artist>Nas</artist>
+    <recordName>Illmatic</recordName>
+    <price>12.00</price>
+    <recId>4256890</recId>
+  </Record>
 </root>

@@ -75,7 +75,11 @@ namespace MusicShop
             doc.Save(fileName);
             MessageBox.Show("New user has been added!!");
 
-            listPanel[0].BringToFront();
+            foreach (Panel p in listPanel)
+            {
+                p.Visible = false;
+            }
+            panelLogin.Visible = true;
 
         }
 
@@ -95,6 +99,12 @@ namespace MusicShop
                     AdminForm af = new AdminForm();
                     af.Show();
                     this.Hide();
+                }
+                if (nodes[i]["isAdmin"].InnerXml.Trim().Equals("0") && nodes[i]["username"].InnerXml.Trim().Equals(usernameLoginTB.Text.Trim()) && nodes[i]["password"].InnerXml.Trim().Equals(passwordLoginTB.Text.Trim()))
+                {
+                    string userid = nodes[i]["uid"].InnerText;
+                    MusicShop ms = new MusicShop(userid);
+                    ms.Show();
                 }
             }
 
