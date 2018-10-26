@@ -43,6 +43,7 @@
             this.panelRegister = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.passwordRegister2TB = new System.Windows.Forms.TextBox();
+            this.backLoginLbl = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             this.panelRegister.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.passwordLoginTB.Name = "passwordLoginTB";
             this.passwordLoginTB.Size = new System.Drawing.Size(176, 20);
             this.passwordLoginTB.TabIndex = 1;
+            this.passwordLoginTB.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -84,7 +86,7 @@
             this.loginBtn.Location = new System.Drawing.Point(70, 218);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(75, 23);
-            this.loginBtn.TabIndex = 4;
+            this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -94,7 +96,7 @@
             this.registerBtn.Location = new System.Drawing.Point(171, 218);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(75, 23);
-            this.registerBtn.TabIndex = 5;
+            this.registerBtn.TabIndex = 4;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
@@ -107,7 +109,7 @@
             this.panelLogin.Controls.Add(this.loginBtn);
             this.panelLogin.Controls.Add(this.passwordLoginTB);
             this.panelLogin.Controls.Add(this.label2);
-            this.panelLogin.Location = new System.Drawing.Point(13, 13);
+            this.panelLogin.Location = new System.Drawing.Point(12, 9);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(330, 355);
             this.panelLogin.TabIndex = 6;
@@ -126,7 +128,7 @@
             this.submitBtn.Location = new System.Drawing.Point(112, 249);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(75, 23);
-            this.submitBtn.TabIndex = 5;
+            this.submitBtn.TabIndex = 4;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
@@ -144,6 +146,7 @@
             this.passwordRegister1TB.Name = "passwordRegister1TB";
             this.passwordRegister1TB.Size = new System.Drawing.Size(176, 20);
             this.passwordRegister1TB.TabIndex = 1;
+            this.passwordRegister1TB.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -156,6 +159,7 @@
             // 
             // panelRegister
             // 
+            this.panelRegister.Controls.Add(this.backLoginLbl);
             this.panelRegister.Controls.Add(this.label7);
             this.panelRegister.Controls.Add(this.passwordRegister2TB);
             this.panelRegister.Controls.Add(this.label3);
@@ -163,9 +167,9 @@
             this.panelRegister.Controls.Add(this.registerUsernameTB);
             this.panelRegister.Controls.Add(this.passwordRegister1TB);
             this.panelRegister.Controls.Add(this.label4);
-            this.panelRegister.Location = new System.Drawing.Point(10, 13);
+            this.panelRegister.Location = new System.Drawing.Point(12, 9);
             this.panelRegister.Name = "panelRegister";
-            this.panelRegister.Size = new System.Drawing.Size(330, 355);
+            this.panelRegister.Size = new System.Drawing.Size(327, 355);
             this.panelRegister.TabIndex = 7;
             // 
             // label7
@@ -182,13 +186,24 @@
             this.passwordRegister2TB.Location = new System.Drawing.Point(70, 218);
             this.passwordRegister2TB.Name = "passwordRegister2TB";
             this.passwordRegister2TB.Size = new System.Drawing.Size(176, 20);
-            this.passwordRegister2TB.TabIndex = 6;
+            this.passwordRegister2TB.TabIndex = 3;
+            this.passwordRegister2TB.UseSystemPasswordChar = true;
+            // 
+            // backLoginLbl
+            // 
+            this.backLoginLbl.AutoSize = true;
+            this.backLoginLbl.Location = new System.Drawing.Point(21, 23);
+            this.backLoginLbl.Name = "backLoginLbl";
+            this.backLoginLbl.Size = new System.Drawing.Size(78, 13);
+            this.backLoginLbl.TabIndex = 8;
+            this.backLoginLbl.Text = "Back to login...";
+            this.backLoginLbl.Click += new System.EventHandler(this.backLoginLbl_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 374);
+            this.ClientSize = new System.Drawing.Size(346, 378);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogin);
             this.Name = "LoginForm";
@@ -219,5 +234,6 @@
         private System.Windows.Forms.Panel panelRegister;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox passwordRegister2TB;
+        private System.Windows.Forms.Label backLoginLbl;
     }
 }

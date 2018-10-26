@@ -90,6 +90,7 @@ namespace MusicShop
             string fileName = path.Substring(0, path.Length - 3) + "Users.xml";
             XmlDocument xdoc = new XmlDocument();
             xdoc.Load(fileName);
+            bool found = false;
             XmlNodeList nodes = xdoc.GetElementsByTagName("User");
             for (int i = 0; i < nodes.Count; i++)
             {
@@ -99,16 +100,30 @@ namespace MusicShop
                     AdminForm af = new AdminForm();
                     af.Show();
                     this.Hide();
+                    found = true;
                 }
                 if (nodes[i]["isAdmin"].InnerXml.Trim().Equals("0") && nodes[i]["username"].InnerXml.Trim().Equals(usernameLoginTB.Text.Trim()) && nodes[i]["password"].InnerXml.Trim().Equals(passwordLoginTB.Text.Trim()))
                 {
                     string userid = nodes[i]["uid"].InnerText;
                     MusicShop ms = new MusicShop(userid);
                     ms.Show();
+                    found = true;
                 }
             }
 
+            if (!found)
+            {
+                MessageBox.Show("No user by those credentials!!");
+            }
         }
 
+        private void backLoginLbl_Click(object sender, EventArgs e)
+        {
+            foreach (Panel p in listPanel)
+            {
+                p.Visible = false;
+            }
+            panelLogin.Visible = true;
+        }
     }
 }
