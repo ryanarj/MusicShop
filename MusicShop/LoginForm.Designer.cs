@@ -111,7 +111,7 @@
             this.panelLogin.Controls.Add(this.label2);
             this.panelLogin.Location = new System.Drawing.Point(12, 9);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(330, 355);
+            this.panelLogin.Size = new System.Drawing.Size(327, 355);
             this.panelLogin.TabIndex = 6;
             // 
             // label3
@@ -205,11 +205,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(346, 378);
+            this.ClientSize = new System.Drawing.Size(346, 382);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogin);
             this.Name = "LoginForm";
-            this.Text = "Login Form";
+            this.Text = "VHHM";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

@@ -98,12 +98,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MusicShopLibrary\MusicShopLibrary.csproj">
-      <Project>{53be5ff8-acd5-40ac-beb8-009d4da8e1f4}</Project>
-      <Name>MusicShopLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Users.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

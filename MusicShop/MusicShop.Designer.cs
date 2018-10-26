@@ -47,11 +47,12 @@
             // 
             this.headerText.AutoSize = true;
             this.headerText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.headerText.Location = new System.Drawing.Point(13, 13);
             this.headerText.Name = "headerText";
-            this.headerText.Size = new System.Drawing.Size(176, 19);
+            this.headerText.Size = new System.Drawing.Size(319, 19);
             this.headerText.TabIndex = 0;
-            this.headerText.Text = "Welcome to M-Shop";
+            this.headerText.Text = "Welcome to Vinyls for Hip Hop Music";
             // 
             // musicRecordListBox
             // 
@@ -67,6 +68,7 @@
             // 
             this.musicRecordLabel.AutoSize = true;
             this.musicRecordLabel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.musicRecordLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.musicRecordLabel.Location = new System.Drawing.Point(90, 30);
             this.musicRecordLabel.Name = "musicRecordLabel";
             this.musicRecordLabel.Size = new System.Drawing.Size(131, 19);
@@ -132,6 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(44, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 19);
@@ -164,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(400, 381);
+            this.ClientSize = new System.Drawing.Size(396, 374);
             this.Controls.Add(this.panelViewPurchase);
             this.Controls.Add(this.panelPurchase);
             this.Controls.Add(this.headerText);
@@ -172,7 +175,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MusicShop";
-            this.Text = "Music Shop";
+            this.Text = "VHHM";
             this.Load += new System.EventHandler(this.MusicShop_Load);
             this.panelPurchase.ResumeLayout(false);
             this.panelPurchase.PerformLayout();

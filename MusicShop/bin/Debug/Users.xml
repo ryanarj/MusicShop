@@ -38,4 +38,10 @@
     <password>test</password>
     <isAdmin>0</isAdmin>
   </User>
+  <User>
+    <uid>768946693</uid>
+    <username>User1</username>
+    <password>test</password>
+    <isAdmin>0</isAdmin>
+  </User>
 </root>

@@ -323,7 +323,7 @@
             this.Controls.Add(this.panelAdminMenu);
             this.Controls.Add(this.panelAddRecord);
             this.Name = "AdminForm";
-            this.Text = "AdminForm";
+            this.Text = "VHHM";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.panelAdminMenu.ResumeLayout(false);
             this.panelAdminMenu.PerformLayout();

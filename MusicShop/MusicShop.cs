@@ -148,15 +148,14 @@ namespace MusicShop
             XmlDocument xdoc = new XmlDocument();
             xdoc.Load(fileName);
             XmlNodeList nodes = xdoc.GetElementsByTagName("Purchase");
-
-            string[] clist = viewListingBox.Items.OfType<string>().ToArray();
-            if (clist.Length == 0)
+            if (viewListingBox.Items.Count == 0)
             {
                 MessageBox.Show("No items available");
             }
             else
             {
 
+                string[] clist = viewListingBox.Items.OfType<string>().ToArray();
                 int index = viewListingBox.Items.IndexOf(viewListingBox.SelectedItem);
                 string[] str = clist[index].Split();
                 string pid = str[str.Length - 1];
