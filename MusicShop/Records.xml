@@ -1,15 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <Record>
-    <artist>Jay Z</artist>
-    <recordName>Blueprint</recordName>
+    <artist>Nas</artist>
+    <recordName>Illmatic</recordName>
     <price>10.00</price>
-    <recId>1023573521</recId>
+    <recId>76523</recId>
   </Record>
   <Record>
     <artist>Nas</artist>
-    <recordName>Illmatic</recordName>
+    <recordName>Nas</recordName>
     <price>12.00</price>
-    <recId>4256890</recId>
+    <recId>10438</recId>
+  </Record>
+  <Record>
+    <artist>AA</artist>
+    <recordName>A</recordName>
+    <price>10.00</price>
+    <recId>19042</recId>
   </Record>
 </root>

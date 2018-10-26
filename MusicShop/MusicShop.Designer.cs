@@ -33,12 +33,12 @@
             this.musicRecordLabel = new System.Windows.Forms.Label();
             this.purchaseButton = new System.Windows.Forms.Button();
             this.panelPurchase = new System.Windows.Forms.Panel();
+            this.viewOrdersBtn = new System.Windows.Forms.Button();
             this.panelViewPurchase = new System.Windows.Forms.Panel();
             this.buyMoreBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cancelOrderBtn = new System.Windows.Forms.Button();
             this.viewListingBox = new System.Windows.Forms.ListBox();
-            this.viewOrdersBtn = new System.Windows.Forms.Button();
             this.panelPurchase.SuspendLayout();
             this.panelViewPurchase.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,17 @@
             this.panelPurchase.Size = new System.Drawing.Size(363, 307);
             this.panelPurchase.TabIndex = 7;
             // 
+            // viewOrdersBtn
+            // 
+            this.viewOrdersBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.viewOrdersBtn.Location = new System.Drawing.Point(113, 271);
+            this.viewOrdersBtn.Name = "viewOrdersBtn";
+            this.viewOrdersBtn.Size = new System.Drawing.Size(125, 29);
+            this.viewOrdersBtn.TabIndex = 8;
+            this.viewOrdersBtn.Text = "View Orders";
+            this.viewOrdersBtn.UseVisualStyleBackColor = false;
+            this.viewOrdersBtn.Click += new System.EventHandler(this.viewOrdersBtn_Click);
+            // 
             // panelViewPurchase
             // 
             this.panelViewPurchase.Controls.Add(this.buyMoreBtn);
@@ -140,7 +151,7 @@
             // 
             // viewListingBox
             // 
-            this.viewListingBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.viewListingBox.BackColor = System.Drawing.SystemColors.Info;
             this.viewListingBox.FormattingEnabled = true;
             this.viewListingBox.ItemHeight = 20;
             this.viewListingBox.Location = new System.Drawing.Point(27, 66);
@@ -148,22 +159,11 @@
             this.viewListingBox.Size = new System.Drawing.Size(299, 164);
             this.viewListingBox.TabIndex = 1;
             // 
-            // viewOrdersBtn
-            // 
-            this.viewOrdersBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.viewOrdersBtn.Location = new System.Drawing.Point(113, 271);
-            this.viewOrdersBtn.Name = "viewOrdersBtn";
-            this.viewOrdersBtn.Size = new System.Drawing.Size(125, 29);
-            this.viewOrdersBtn.TabIndex = 8;
-            this.viewOrdersBtn.Text = "View Orders";
-            this.viewOrdersBtn.UseVisualStyleBackColor = false;
-            this.viewOrdersBtn.Click += new System.EventHandler(this.viewOrdersBtn_Click);
-            // 
             // MusicShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(400, 381);
             this.Controls.Add(this.panelViewPurchase);
             this.Controls.Add(this.panelPurchase);

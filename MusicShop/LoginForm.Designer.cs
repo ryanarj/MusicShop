@@ -41,9 +41,9 @@
             this.passwordRegister1TB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelRegister = new System.Windows.Forms.Panel();
+            this.backLoginLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.passwordRegister2TB = new System.Windows.Forms.TextBox();
-            this.backLoginLbl = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             this.panelRegister.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +125,7 @@
             // 
             // submitBtn
             // 
+            this.submitBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.submitBtn.Location = new System.Drawing.Point(112, 249);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(75, 23);
@@ -172,6 +173,16 @@
             this.panelRegister.Size = new System.Drawing.Size(327, 355);
             this.panelRegister.TabIndex = 7;
             // 
+            // backLoginLbl
+            // 
+            this.backLoginLbl.AutoSize = true;
+            this.backLoginLbl.Location = new System.Drawing.Point(21, 23);
+            this.backLoginLbl.Name = "backLoginLbl";
+            this.backLoginLbl.Size = new System.Drawing.Size(78, 13);
+            this.backLoginLbl.TabIndex = 8;
+            this.backLoginLbl.Text = "Back to login...";
+            this.backLoginLbl.Click += new System.EventHandler(this.backLoginLbl_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -189,20 +200,11 @@
             this.passwordRegister2TB.TabIndex = 3;
             this.passwordRegister2TB.UseSystemPasswordChar = true;
             // 
-            // backLoginLbl
-            // 
-            this.backLoginLbl.AutoSize = true;
-            this.backLoginLbl.Location = new System.Drawing.Point(21, 23);
-            this.backLoginLbl.Name = "backLoginLbl";
-            this.backLoginLbl.Size = new System.Drawing.Size(78, 13);
-            this.backLoginLbl.TabIndex = 8;
-            this.backLoginLbl.Text = "Back to login...";
-            this.backLoginLbl.Click += new System.EventHandler(this.backLoginLbl_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(346, 378);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogin);

@@ -1,16 +1,9 @@
-﻿using MusicShopLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -18,7 +11,6 @@ namespace MusicShop
 {
     public partial class MusicShop : Form
     {
-        static EventWaitHandle _waitHandle = new AutoResetEvent(false);
         DirectoryInfo parentFolder;
         XmlNodeList nodesRecords;
         XmlNodeList nodesViewing;
@@ -77,48 +69,54 @@ namespace MusicShop
 
         private void purchaseButton_Click(object sender, EventArgs e)
         {
-            int index = musicRecordListBox.Items.IndexOf(musicRecordListBox.SelectedItem);
-            string path = parentFolder.FullName;
-            string fileName = path.Substring(0, path.Length - 3) + "Purchase.xml";
-            int pidUni = 0;
-            bool found = false;
-            using (RNGCryptoServiceProvider RCSP = new RNGCryptoServiceProvider())
+            if (musicRecordListBox.Items.Count == 0)
             {
-                byte[] random = new byte[5];
-                RCSP.GetBytes(random);
-                pidUni = BitConverter.ToInt32(random, 0);
+                MessageBox.Show("No items avaiable!");
             }
-            XmlDocument doc = new XmlDocument();
-            doc.Load(fileName);
-
-            foreach(XmlNode node in nodesViewing)
+            else
             {
-                if (node["rid"].InnerText.Equals(recordIds[index]))
+                int index = musicRecordListBox.Items.IndexOf(musicRecordListBox.SelectedItem);
+                string path = parentFolder.FullName;
+                string fileName = path.Substring(0, path.Length - 3) + "Purchase.xml";
+                int pidUni = 0;
+                bool found = false;
+                using (RNGCryptoServiceProvider RCSP = new RNGCryptoServiceProvider())
                 {
-                    found = true;
-                    MessageBox.Show("Purchase already");
+                    byte[] random = new byte[5];
+                    RCSP.GetBytes(random);
+                    pidUni = BitConverter.ToInt32(random, 0);
+                }
+                XmlDocument doc = new XmlDocument();
+                doc.Load(fileName);
+
+                foreach (XmlNode node in nodesViewing)
+                {
+                    if (node["rid"].InnerText.Equals(recordIds[index]))
+                    {
+                        found = true;
+                        MessageBox.Show("Purchase already");
+                    }
+                }
+
+                if (found == false)
+                {
+                    XmlNode purchase = doc.CreateElement("Purchase");
+                    XmlNode userNode = doc.CreateElement("uid");
+                    XmlNode record = doc.CreateElement("rid");
+                    XmlNode pid = doc.CreateElement("pid");
+
+                    userNode.InnerText = userID;
+                    record.InnerText = recordIds[index];
+                    pid.InnerText = Math.Abs(pidUni).ToString();
+
+                    purchase.AppendChild(userNode); purchase.AppendChild(record); purchase.AppendChild(pid);
+                    doc.DocumentElement.AppendChild(purchase);
+                    doc.Save(fileName);
+                    MessageBox.Show("Purchase complete");
+                    SetupViewing();
+                    SetupViewingData();
                 }
             }
-
-            if (found == false)
-            {
-                XmlNode purchase = doc.CreateElement("Purchase");
-                XmlNode userNode = doc.CreateElement("uid");
-                XmlNode record = doc.CreateElement("rid");
-                XmlNode pid = doc.CreateElement("pid");
-
-                userNode.InnerText = userID;
-                record.InnerText = recordIds[index];
-                pid.InnerText = Math.Abs(pidUni).ToString();
-
-                purchase.AppendChild(userNode); purchase.AppendChild(record); purchase.AppendChild(pid);
-                doc.DocumentElement.AppendChild(purchase);
-                doc.Save(fileName);
-                MessageBox.Show("Purchase complete");
-                SetupViewing();
-                SetupViewingData();
-            }
-
         }
 
         private void viewOrdersBtn_Click(object sender, EventArgs e)
@@ -152,25 +150,33 @@ namespace MusicShop
             XmlNodeList nodes = xdoc.GetElementsByTagName("Purchase");
 
             string[] clist = viewListingBox.Items.OfType<string>().ToArray();
-            int index = viewListingBox.Items.IndexOf(viewListingBox.SelectedItem);
-            string[] str = clist[index].Split();
-            string pid = str[str.Length - 1];
-            for (int i = 0; i < nodes.Count; i++)
+            if (clist.Length == 0)
             {
-                if (nodes[i]["pid"].InnerText.Equals(pid))
-                {
+                MessageBox.Show("No items available");
+            }
+            else
+            {
 
-                    nodes[i].ParentNode.RemoveChild(nodes[i]);
-                    MessageBox.Show("Order has been canceled.");
-                    isFound = true;
-                    xdoc.Save(fileName);
+                int index = viewListingBox.Items.IndexOf(viewListingBox.SelectedItem);
+                string[] str = clist[index].Split();
+                string pid = str[str.Length - 1];
+                for (int i = 0; i < nodes.Count; i++)
+                {
+                    if (nodes[i]["pid"].InnerText.Equals(pid))
+                    {
+
+                        nodes[i].ParentNode.RemoveChild(nodes[i]);
+                        MessageBox.Show("Order has been canceled.");
+                        isFound = true;
+                        xdoc.Save(fileName);
+                    }
                 }
+                if (!isFound)
+                {
+                    MessageBox.Show("Cannot find order!");
+                }
+                SetupViewingData();
             }
-            if (!isFound)
-            {
-                MessageBox.Show("Cannot find order!");
-            }
-            SetupViewingData();
         }
     }
 }
