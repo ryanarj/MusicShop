@@ -39,8 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cancelOrderBtn = new System.Windows.Forms.Button();
             this.viewListingBox = new System.Windows.Forms.ListBox();
+            this.panelTopRecords = new System.Windows.Forms.Panel();
+            this.topRecordsBackBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.topRecordsLB = new System.Windows.Forms.ListBox();
+            this.showRecordBtn = new System.Windows.Forms.Button();
             this.panelPurchase.SuspendLayout();
             this.panelViewPurchase.SuspendLayout();
+            this.panelTopRecords.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerText
@@ -114,7 +120,7 @@
             this.panelViewPurchase.Controls.Add(this.label1);
             this.panelViewPurchase.Controls.Add(this.cancelOrderBtn);
             this.panelViewPurchase.Controls.Add(this.viewListingBox);
-            this.panelViewPurchase.Location = new System.Drawing.Point(17, 48);
+            this.panelViewPurchase.Location = new System.Drawing.Point(17, 388);
             this.panelViewPurchase.Name = "panelViewPurchase";
             this.panelViewPurchase.Size = new System.Drawing.Size(363, 307);
             this.panelViewPurchase.TabIndex = 9;
@@ -162,12 +168,66 @@
             this.viewListingBox.Size = new System.Drawing.Size(299, 164);
             this.viewListingBox.TabIndex = 1;
             // 
+            // panelTopRecords
+            // 
+            this.panelTopRecords.Controls.Add(this.showRecordBtn);
+            this.panelTopRecords.Controls.Add(this.topRecordsBackBtn);
+            this.panelTopRecords.Controls.Add(this.label2);
+            this.panelTopRecords.Controls.Add(this.topRecordsLB);
+            this.panelTopRecords.Location = new System.Drawing.Point(466, 57);
+            this.panelTopRecords.Name = "panelTopRecords";
+            this.panelTopRecords.Size = new System.Drawing.Size(363, 307);
+            this.panelTopRecords.TabIndex = 10;
+            // 
+            // topRecordsBackBtn
+            // 
+            this.topRecordsBackBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.topRecordsBackBtn.Location = new System.Drawing.Point(40, 236);
+            this.topRecordsBackBtn.Name = "topRecordsBackBtn";
+            this.topRecordsBackBtn.Size = new System.Drawing.Size(125, 64);
+            this.topRecordsBackBtn.TabIndex = 8;
+            this.topRecordsBackBtn.Text = "Back to Purchase";
+            this.topRecordsBackBtn.UseVisualStyleBackColor = false;
+            this.topRecordsBackBtn.Click += new System.EventHandler(this.topRecordsBackBtn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(80, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Top Music Records ";
+            // 
+            // topRecordsLB
+            // 
+            this.topRecordsLB.BackColor = System.Drawing.SystemColors.Info;
+            this.topRecordsLB.FormattingEnabled = true;
+            this.topRecordsLB.ItemHeight = 20;
+            this.topRecordsLB.Location = new System.Drawing.Point(27, 66);
+            this.topRecordsLB.Name = "topRecordsLB";
+            this.topRecordsLB.Size = new System.Drawing.Size(299, 164);
+            this.topRecordsLB.TabIndex = 1;
+            // 
+            // showRecordBtn
+            // 
+            this.showRecordBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.showRecordBtn.Location = new System.Drawing.Point(181, 236);
+            this.showRecordBtn.Name = "showRecordBtn";
+            this.showRecordBtn.Size = new System.Drawing.Size(125, 64);
+            this.showRecordBtn.TabIndex = 9;
+            this.showRecordBtn.Text = "Show Records";
+            this.showRecordBtn.UseVisualStyleBackColor = false;
+            // 
             // MusicShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(396, 374);
+            this.ClientSize = new System.Drawing.Size(913, 585);
+            this.Controls.Add(this.panelTopRecords);
             this.Controls.Add(this.panelViewPurchase);
             this.Controls.Add(this.panelPurchase);
             this.Controls.Add(this.headerText);
@@ -181,6 +241,8 @@
             this.panelPurchase.PerformLayout();
             this.panelViewPurchase.ResumeLayout(false);
             this.panelViewPurchase.PerformLayout();
+            this.panelTopRecords.ResumeLayout(false);
+            this.panelTopRecords.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +261,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cancelOrderBtn;
         private System.Windows.Forms.ListBox viewListingBox;
+        private System.Windows.Forms.Panel panelTopRecords;
+        private System.Windows.Forms.Button topRecordsBackBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox topRecordsLB;
+        private System.Windows.Forms.Button showRecordBtn;
     }
 }
 

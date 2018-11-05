@@ -177,5 +177,10 @@ namespace MusicShop
                 SetupViewingData();
             }
         }
+
+        private void topRecordsBackBtn_Click(object sender, EventArgs e)
+        {
+            panels[0].BringToFront();
+        }
     }
 }
