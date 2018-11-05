@@ -42,9 +42,11 @@
             this.panelTopRecords = new System.Windows.Forms.Panel();
             this.topRecordsBackBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.topRecordsLB = new System.Windows.Forms.ListBox();
+            this.recordsSoldLB = new System.Windows.Forms.ListBox();
             this.showRecordBtn = new System.Windows.Forms.Button();
             this.viewTopRecordsLbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.logoutLbl = new System.Windows.Forms.Label();
             this.panelPurchase.SuspendLayout();
             this.panelViewPurchase.SuspendLayout();
             this.panelTopRecords.SuspendLayout();
@@ -55,11 +57,10 @@
             this.headerText.AutoSize = true;
             this.headerText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.headerText.Location = new System.Drawing.Point(13, 13);
+            this.headerText.Location = new System.Drawing.Point(15, 9);
             this.headerText.Name = "headerText";
-            this.headerText.Size = new System.Drawing.Size(319, 19);
+            this.headerText.Size = new System.Drawing.Size(0, 19);
             this.headerText.TabIndex = 0;
-            this.headerText.Text = "Welcome to Vinyls for Hip Hop Music";
             // 
             // musicRecordListBox
             // 
@@ -100,9 +101,9 @@
             this.panelPurchase.Controls.Add(this.musicRecordLabel);
             this.panelPurchase.Controls.Add(this.purchaseButton);
             this.panelPurchase.Controls.Add(this.musicRecordListBox);
-            this.panelPurchase.Location = new System.Drawing.Point(17, 48);
+            this.panelPurchase.Location = new System.Drawing.Point(12, 59);
             this.panelPurchase.Name = "panelPurchase";
-            this.panelPurchase.Size = new System.Drawing.Size(363, 307);
+            this.panelPurchase.Size = new System.Drawing.Size(347, 308);
             this.panelPurchase.TabIndex = 7;
             // 
             // viewOrdersBtn
@@ -122,9 +123,9 @@
             this.panelViewPurchase.Controls.Add(this.label1);
             this.panelViewPurchase.Controls.Add(this.cancelOrderBtn);
             this.panelViewPurchase.Controls.Add(this.viewListingBox);
-            this.panelViewPurchase.Location = new System.Drawing.Point(17, 48);
+            this.panelViewPurchase.Location = new System.Drawing.Point(12, 59);
             this.panelViewPurchase.Name = "panelViewPurchase";
-            this.panelViewPurchase.Size = new System.Drawing.Size(363, 307);
+            this.panelViewPurchase.Size = new System.Drawing.Size(347, 308);
             this.panelViewPurchase.TabIndex = 9;
             // 
             // buyMoreBtn
@@ -175,16 +176,16 @@
             this.panelTopRecords.Controls.Add(this.showRecordBtn);
             this.panelTopRecords.Controls.Add(this.topRecordsBackBtn);
             this.panelTopRecords.Controls.Add(this.label2);
-            this.panelTopRecords.Controls.Add(this.topRecordsLB);
-            this.panelTopRecords.Location = new System.Drawing.Point(17, 48);
+            this.panelTopRecords.Controls.Add(this.recordsSoldLB);
+            this.panelTopRecords.Location = new System.Drawing.Point(12, 59);
             this.panelTopRecords.Name = "panelTopRecords";
-            this.panelTopRecords.Size = new System.Drawing.Size(363, 307);
+            this.panelTopRecords.Size = new System.Drawing.Size(347, 308);
             this.panelTopRecords.TabIndex = 10;
             // 
             // topRecordsBackBtn
             // 
             this.topRecordsBackBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.topRecordsBackBtn.Location = new System.Drawing.Point(40, 236);
+            this.topRecordsBackBtn.Location = new System.Drawing.Point(37, 224);
             this.topRecordsBackBtn.Name = "topRecordsBackBtn";
             this.topRecordsBackBtn.Size = new System.Drawing.Size(125, 64);
             this.topRecordsBackBtn.TabIndex = 8;
@@ -197,31 +198,32 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(80, 28);
+            this.label2.Location = new System.Drawing.Point(79, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 19);
+            this.label2.Size = new System.Drawing.Size(177, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Top Music Records ";
+            this.label2.Text = "Music Records  Sold";
             // 
-            // topRecordsLB
+            // recordsSoldLB
             // 
-            this.topRecordsLB.BackColor = System.Drawing.SystemColors.Info;
-            this.topRecordsLB.FormattingEnabled = true;
-            this.topRecordsLB.ItemHeight = 20;
-            this.topRecordsLB.Location = new System.Drawing.Point(27, 66);
-            this.topRecordsLB.Name = "topRecordsLB";
-            this.topRecordsLB.Size = new System.Drawing.Size(299, 164);
-            this.topRecordsLB.TabIndex = 1;
+            this.recordsSoldLB.BackColor = System.Drawing.SystemColors.Info;
+            this.recordsSoldLB.FormattingEnabled = true;
+            this.recordsSoldLB.ItemHeight = 20;
+            this.recordsSoldLB.Location = new System.Drawing.Point(27, 54);
+            this.recordsSoldLB.Name = "recordsSoldLB";
+            this.recordsSoldLB.Size = new System.Drawing.Size(299, 164);
+            this.recordsSoldLB.TabIndex = 1;
             // 
             // showRecordBtn
             // 
             this.showRecordBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.showRecordBtn.Location = new System.Drawing.Point(181, 236);
+            this.showRecordBtn.Location = new System.Drawing.Point(177, 224);
             this.showRecordBtn.Name = "showRecordBtn";
             this.showRecordBtn.Size = new System.Drawing.Size(125, 64);
             this.showRecordBtn.TabIndex = 9;
             this.showRecordBtn.Text = "Show Records";
             this.showRecordBtn.UseVisualStyleBackColor = false;
+            this.showRecordBtn.Click += new System.EventHandler(this.showRecordBtn_Click);
             // 
             // viewTopRecordsLbl
             // 
@@ -234,12 +236,35 @@
             this.viewTopRecordsLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.viewTopRecordsLbl.Click += new System.EventHandler(this.viewTopRecordsLbl_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(15, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(319, 19);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Welcome to Vinyls for Hip Hop Music";
+            // 
+            // logoutLbl
+            // 
+            this.logoutLbl.AutoSize = true;
+            this.logoutLbl.Location = new System.Drawing.Point(12, 374);
+            this.logoutLbl.Name = "logoutLbl";
+            this.logoutLbl.Size = new System.Drawing.Size(54, 20);
+            this.logoutLbl.TabIndex = 13;
+            this.logoutLbl.Text = "Logout";
+            this.logoutLbl.Click += new System.EventHandler(this.logoutLbl_Click);
+            // 
             // MusicShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(385, 360);
+            this.ClientSize = new System.Drawing.Size(369, 402);
+            this.Controls.Add(this.logoutLbl);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panelTopRecords);
             this.Controls.Add(this.panelViewPurchase);
             this.Controls.Add(this.panelPurchase);
@@ -277,9 +302,11 @@
         private System.Windows.Forms.Panel panelTopRecords;
         private System.Windows.Forms.Button topRecordsBackBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox topRecordsLB;
+        private System.Windows.Forms.ListBox recordsSoldLB;
         private System.Windows.Forms.Button showRecordBtn;
         private System.Windows.Forms.Label viewTopRecordsLbl;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label logoutLbl;
     }
 }
 

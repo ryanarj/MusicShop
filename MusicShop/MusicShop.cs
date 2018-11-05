@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -17,14 +18,17 @@ namespace MusicShop
         List<string> recordIds = new List<string>();
         List<Panel> panels = new List<Panel>();
         string userID;
-        public MusicShop(string id)
+        string username;
+        public MusicShop(string id, string u_name)
         {
             InitializeComponent();
             userID = id;
+            username = u_name;
             string expath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             parentFolder = Directory.GetParent(expath);
             SetupData();
             SetupViewingData();
+            SetupViewing();
 
             foreach (XmlNode node in nodesRecords)
             {
@@ -133,6 +137,7 @@ namespace MusicShop
             panels.Add(panelViewPurchase);
             panels.Add(panelTopRecords);
             panels[0].BringToFront();
+            headerText.Text = "Hi " + username + ",";
         }
 
         private void buyMoreBtn_Click(object sender, EventArgs e)
@@ -152,6 +157,9 @@ namespace MusicShop
             if (viewListingBox.Items.Count == 0)
             {
                 MessageBox.Show("No items available");
+            } else if (viewListingBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("An item must be selected.");
             }
             else
             {
@@ -187,6 +195,50 @@ namespace MusicShop
         private void viewTopRecordsLbl_Click(object sender, EventArgs e)
         {
             panels[2].BringToFront();
+        }
+
+        private void logoutLbl_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm lf = new LoginForm();
+            lf.Show();
+        }
+
+        private void showRecordBtn_Click(object sender, EventArgs e)
+        {
+            string path = parentFolder.FullName;
+            Dictionary<string, int> occuranceDict = new Dictionary<string, int>();
+            int count = 0;
+            string purchaseFile = path.Substring(0, path.Length - 3) + "Purchase.xml";
+            string recordFile = path.Substring(0, path.Length - 3) + "Records.xml";
+            XmlDocument xdoc1 = new XmlDocument();
+            XmlDocument xdoc2 = new XmlDocument();
+            xdoc1.Load(purchaseFile);
+            xdoc2.Load(recordFile);
+            XmlNodeList pNodes = xdoc1.GetElementsByTagName("Purchase");
+            XmlNodeList rNodes = xdoc2.GetElementsByTagName("Record");
+            foreach (XmlNode node in pNodes)
+            {
+                if (!occuranceDict.ContainsKey(node["rid"].InnerText))
+                {
+                    occuranceDict[node["rid"].InnerText] = 1;
+                }
+                else
+                {
+                    occuranceDict[node["rid"].InnerText]++;
+                }
+                count++;
+            }
+
+            foreach (XmlNode node in rNodes)
+            {
+                if (occuranceDict.ContainsKey(node["recId"].InnerText))
+                {
+                    recordsSoldLB.Items.Add(node["recordName"].InnerText + " by " + node["artist"].InnerText + " at " + node["price"].InnerText + " was purchased " + occuranceDict[node["recId"].InnerText].ToString());
+                }
+            }
+
+
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Security.Cryptography;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -105,9 +106,11 @@ namespace MusicShop
                 if (nodes[i]["isAdmin"].InnerXml.Trim().Equals("0") && nodes[i]["username"].InnerXml.Trim().Equals(usernameLoginTB.Text.Trim()) && nodes[i]["password"].InnerXml.Trim().Equals(passwordLoginTB.Text.Trim()))
                 {
                     string userid = nodes[i]["uid"].InnerText;
-                    MusicShop ms = new MusicShop(userid);
+                    string username = nodes[i]["username"].InnerText;
+                    MusicShop ms = new MusicShop(userid, username);
                     ms.Show();
                     found = true;
+                    this.Hide();
                 }
             }
 
