@@ -131,6 +131,7 @@ namespace MusicShop
         {
             panels.Add(panelPurchase);
             panels.Add(panelViewPurchase);
+            panels.Add(panelTopRecords);
             panels[0].BringToFront();
         }
 
@@ -181,6 +182,11 @@ namespace MusicShop
         private void topRecordsBackBtn_Click(object sender, EventArgs e)
         {
             panels[0].BringToFront();
+        }
+
+        private void viewTopRecordsLbl_Click(object sender, EventArgs e)
+        {
+            panels[2].BringToFront();
         }
     }
 }
