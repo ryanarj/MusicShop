@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
-using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -64,7 +63,7 @@ namespace MusicShop
                 {
                     if (node["uid"].InnerText.Equals(userID) && node["rid"].InnerText.Equals(rNode["recId"].InnerText))
                     {
-                        viewListingBox.Items.Add(rNode["recordName"].InnerText + " by " + rNode["artist"].InnerText + " at " + rNode["price"].InnerText + " TNo. " + node["pid"].InnerText);
+                        viewListingBox.Items.Add(rNode["recordName"].InnerText + " by " + rNode["artist"].InnerText + " at " + rNode["price"].InnerText + Environment.NewLine+ " TNo. " + node["pid"].InnerText);
                     }
                 }
 
@@ -76,6 +75,9 @@ namespace MusicShop
             if (musicRecordListBox.Items.Count == 0)
             {
                 MessageBox.Show("No items avaiable!");
+            } else if (musicRecordListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("An item must be selected.");
             }
             else
             {
@@ -192,20 +194,9 @@ namespace MusicShop
             panels[0].BringToFront();
         }
 
-        private void viewTopRecordsLbl_Click(object sender, EventArgs e)
-        {
-            panels[2].BringToFront();
-        }
-
-        private void logoutLbl_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            LoginForm lf = new LoginForm();
-            lf.Show();
-        }
-
         private void showRecordBtn_Click(object sender, EventArgs e)
         {
+            recordsSoldLB.Items.Clear();
             string path = parentFolder.FullName;
             Dictionary<string, int> occuranceDict = new Dictionary<string, int>();
             int count = 0;
@@ -234,11 +225,28 @@ namespace MusicShop
             {
                 if (occuranceDict.ContainsKey(node["recId"].InnerText))
                 {
-                    recordsSoldLB.Items.Add(node["recordName"].InnerText + " by " + node["artist"].InnerText + " at " + node["price"].InnerText + " was purchased " + occuranceDict[node["recId"].InnerText].ToString());
+                    recordsSoldLB.Items.Add(node["recordName"].InnerText + " by " + node["artist"].InnerText + " at " +
+                        node["price"].InnerText + " was purchased " + occuranceDict[node["recId"].InnerText].ToString());
                 }
+            }
+            if (recordsSoldLB.Items.Count == 0)
+            {
+                MessageBox.Show("No records have been sold.");
             }
 
 
+        }
+
+        private void viewRecordLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panels[2].BringToFront();
+        }
+
+        private void logoutLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            LoginForm lf = new LoginForm();
+            lf.Show();
         }
     }
 }

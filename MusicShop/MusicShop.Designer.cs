@@ -40,13 +40,13 @@
             this.cancelOrderBtn = new System.Windows.Forms.Button();
             this.viewListingBox = new System.Windows.Forms.ListBox();
             this.panelTopRecords = new System.Windows.Forms.Panel();
+            this.showRecordBtn = new System.Windows.Forms.Button();
             this.topRecordsBackBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.recordsSoldLB = new System.Windows.Forms.ListBox();
-            this.showRecordBtn = new System.Windows.Forms.Button();
-            this.viewTopRecordsLbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.logoutLbl = new System.Windows.Forms.Label();
+            this.logoutLbl = new System.Windows.Forms.LinkLabel();
+            this.viewRecordLbl = new System.Windows.Forms.LinkLabel();
             this.panelPurchase.SuspendLayout();
             this.panelViewPurchase.SuspendLayout();
             this.panelTopRecords.SuspendLayout();
@@ -57,7 +57,7 @@
             this.headerText.AutoSize = true;
             this.headerText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.headerText.Location = new System.Drawing.Point(15, 9);
+            this.headerText.Location = new System.Drawing.Point(25, 7);
             this.headerText.Name = "headerText";
             this.headerText.Size = new System.Drawing.Size(0, 19);
             this.headerText.TabIndex = 0;
@@ -67,9 +67,9 @@
             this.musicRecordListBox.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.musicRecordListBox.FormattingEnabled = true;
             this.musicRecordListBox.ItemHeight = 20;
-            this.musicRecordListBox.Location = new System.Drawing.Point(27, 66);
+            this.musicRecordListBox.Location = new System.Drawing.Point(28, 54);
             this.musicRecordListBox.Name = "musicRecordListBox";
-            this.musicRecordListBox.Size = new System.Drawing.Size(299, 164);
+            this.musicRecordListBox.Size = new System.Drawing.Size(353, 164);
             this.musicRecordListBox.TabIndex = 1;
             // 
             // musicRecordLabel
@@ -77,7 +77,7 @@
             this.musicRecordLabel.AutoSize = true;
             this.musicRecordLabel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.musicRecordLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.musicRecordLabel.Location = new System.Drawing.Point(90, 30);
+            this.musicRecordLabel.Location = new System.Drawing.Point(125, 32);
             this.musicRecordLabel.Name = "musicRecordLabel";
             this.musicRecordLabel.Size = new System.Drawing.Size(131, 19);
             this.musicRecordLabel.TabIndex = 2;
@@ -86,7 +86,7 @@
             // purchaseButton
             // 
             this.purchaseButton.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.purchaseButton.Location = new System.Drawing.Point(113, 236);
+            this.purchaseButton.Location = new System.Drawing.Point(142, 224);
             this.purchaseButton.Name = "purchaseButton";
             this.purchaseButton.Size = new System.Drawing.Size(125, 29);
             this.purchaseButton.TabIndex = 6;
@@ -96,20 +96,19 @@
             // 
             // panelPurchase
             // 
-            this.panelPurchase.Controls.Add(this.viewTopRecordsLbl);
             this.panelPurchase.Controls.Add(this.viewOrdersBtn);
             this.panelPurchase.Controls.Add(this.musicRecordLabel);
             this.panelPurchase.Controls.Add(this.purchaseButton);
             this.panelPurchase.Controls.Add(this.musicRecordListBox);
-            this.panelPurchase.Location = new System.Drawing.Point(12, 59);
+            this.panelPurchase.Location = new System.Drawing.Point(22, 57);
             this.panelPurchase.Name = "panelPurchase";
-            this.panelPurchase.Size = new System.Drawing.Size(347, 308);
+            this.panelPurchase.Size = new System.Drawing.Size(466, 308);
             this.panelPurchase.TabIndex = 7;
             // 
             // viewOrdersBtn
             // 
             this.viewOrdersBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.viewOrdersBtn.Location = new System.Drawing.Point(113, 271);
+            this.viewOrdersBtn.Location = new System.Drawing.Point(142, 259);
             this.viewOrdersBtn.Name = "viewOrdersBtn";
             this.viewOrdersBtn.Size = new System.Drawing.Size(125, 29);
             this.viewOrdersBtn.TabIndex = 8;
@@ -123,15 +122,15 @@
             this.panelViewPurchase.Controls.Add(this.label1);
             this.panelViewPurchase.Controls.Add(this.cancelOrderBtn);
             this.panelViewPurchase.Controls.Add(this.viewListingBox);
-            this.panelViewPurchase.Location = new System.Drawing.Point(12, 59);
+            this.panelViewPurchase.Location = new System.Drawing.Point(22, 57);
             this.panelViewPurchase.Name = "panelViewPurchase";
-            this.panelViewPurchase.Size = new System.Drawing.Size(347, 308);
+            this.panelViewPurchase.Size = new System.Drawing.Size(466, 308);
             this.panelViewPurchase.TabIndex = 9;
             // 
             // buyMoreBtn
             // 
             this.buyMoreBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.buyMoreBtn.Location = new System.Drawing.Point(113, 271);
+            this.buyMoreBtn.Location = new System.Drawing.Point(164, 271);
             this.buyMoreBtn.Name = "buyMoreBtn";
             this.buyMoreBtn.Size = new System.Drawing.Size(125, 29);
             this.buyMoreBtn.TabIndex = 8;
@@ -144,7 +143,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(44, 30);
+            this.label1.Location = new System.Drawing.Point(109, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 19);
             this.label1.TabIndex = 2;
@@ -153,7 +152,7 @@
             // cancelOrderBtn
             // 
             this.cancelOrderBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.cancelOrderBtn.Location = new System.Drawing.Point(113, 236);
+            this.cancelOrderBtn.Location = new System.Drawing.Point(164, 236);
             this.cancelOrderBtn.Name = "cancelOrderBtn";
             this.cancelOrderBtn.Size = new System.Drawing.Size(125, 29);
             this.cancelOrderBtn.TabIndex = 6;
@@ -168,7 +167,7 @@
             this.viewListingBox.ItemHeight = 20;
             this.viewListingBox.Location = new System.Drawing.Point(27, 66);
             this.viewListingBox.Name = "viewListingBox";
-            this.viewListingBox.Size = new System.Drawing.Size(299, 164);
+            this.viewListingBox.Size = new System.Drawing.Size(390, 164);
             this.viewListingBox.TabIndex = 1;
             // 
             // panelTopRecords
@@ -177,15 +176,26 @@
             this.panelTopRecords.Controls.Add(this.topRecordsBackBtn);
             this.panelTopRecords.Controls.Add(this.label2);
             this.panelTopRecords.Controls.Add(this.recordsSoldLB);
-            this.panelTopRecords.Location = new System.Drawing.Point(12, 59);
+            this.panelTopRecords.Location = new System.Drawing.Point(22, 57);
             this.panelTopRecords.Name = "panelTopRecords";
-            this.panelTopRecords.Size = new System.Drawing.Size(347, 308);
+            this.panelTopRecords.Size = new System.Drawing.Size(466, 308);
             this.panelTopRecords.TabIndex = 10;
+            // 
+            // showRecordBtn
+            // 
+            this.showRecordBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.showRecordBtn.Location = new System.Drawing.Point(241, 224);
+            this.showRecordBtn.Name = "showRecordBtn";
+            this.showRecordBtn.Size = new System.Drawing.Size(125, 64);
+            this.showRecordBtn.TabIndex = 9;
+            this.showRecordBtn.Text = "Show Records";
+            this.showRecordBtn.UseVisualStyleBackColor = false;
+            this.showRecordBtn.Click += new System.EventHandler(this.showRecordBtn_Click);
             // 
             // topRecordsBackBtn
             // 
             this.topRecordsBackBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.topRecordsBackBtn.Location = new System.Drawing.Point(37, 224);
+            this.topRecordsBackBtn.Location = new System.Drawing.Point(54, 224);
             this.topRecordsBackBtn.Name = "topRecordsBackBtn";
             this.topRecordsBackBtn.Size = new System.Drawing.Size(125, 64);
             this.topRecordsBackBtn.TabIndex = 8;
@@ -209,39 +219,17 @@
             this.recordsSoldLB.BackColor = System.Drawing.SystemColors.Info;
             this.recordsSoldLB.FormattingEnabled = true;
             this.recordsSoldLB.ItemHeight = 20;
-            this.recordsSoldLB.Location = new System.Drawing.Point(27, 54);
+            this.recordsSoldLB.Location = new System.Drawing.Point(29, 54);
             this.recordsSoldLB.Name = "recordsSoldLB";
-            this.recordsSoldLB.Size = new System.Drawing.Size(299, 164);
+            this.recordsSoldLB.Size = new System.Drawing.Size(366, 164);
             this.recordsSoldLB.TabIndex = 1;
-            // 
-            // showRecordBtn
-            // 
-            this.showRecordBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.showRecordBtn.Location = new System.Drawing.Point(177, 224);
-            this.showRecordBtn.Name = "showRecordBtn";
-            this.showRecordBtn.Size = new System.Drawing.Size(125, 64);
-            this.showRecordBtn.TabIndex = 9;
-            this.showRecordBtn.Text = "Show Records";
-            this.showRecordBtn.UseVisualStyleBackColor = false;
-            this.showRecordBtn.Click += new System.EventHandler(this.showRecordBtn_Click);
-            // 
-            // viewTopRecordsLbl
-            // 
-            this.viewTopRecordsLbl.AutoSize = true;
-            this.viewTopRecordsLbl.Location = new System.Drawing.Point(3, 9);
-            this.viewTopRecordsLbl.Name = "viewTopRecordsLbl";
-            this.viewTopRecordsLbl.Size = new System.Drawing.Size(131, 20);
-            this.viewTopRecordsLbl.TabIndex = 9;
-            this.viewTopRecordsLbl.Text = "View Top Records ";
-            this.viewTopRecordsLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.viewTopRecordsLbl.Click += new System.EventHandler(this.viewTopRecordsLbl_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(15, 37);
+            this.label4.Location = new System.Drawing.Point(69, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(319, 19);
             this.label4.TabIndex = 12;
@@ -250,19 +238,32 @@
             // logoutLbl
             // 
             this.logoutLbl.AutoSize = true;
-            this.logoutLbl.Location = new System.Drawing.Point(12, 374);
+            this.logoutLbl.Location = new System.Drawing.Point(45, 389);
             this.logoutLbl.Name = "logoutLbl";
-            this.logoutLbl.Size = new System.Drawing.Size(54, 20);
-            this.logoutLbl.TabIndex = 13;
-            this.logoutLbl.Text = "Logout";
-            this.logoutLbl.Click += new System.EventHandler(this.logoutLbl_Click);
+            this.logoutLbl.Size = new System.Drawing.Size(66, 20);
+            this.logoutLbl.TabIndex = 14;
+            this.logoutLbl.TabStop = true;
+            this.logoutLbl.Text = "Logout...";
+            this.logoutLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLbl_LinkClicked);
+            // 
+            // viewRecordLbl
+            // 
+            this.viewRecordLbl.AutoSize = true;
+            this.viewRecordLbl.Location = new System.Drawing.Point(345, 389);
+            this.viewRecordLbl.Name = "viewRecordLbl";
+            this.viewRecordLbl.Size = new System.Drawing.Size(130, 20);
+            this.viewRecordLbl.TabIndex = 15;
+            this.viewRecordLbl.TabStop = true;
+            this.viewRecordLbl.Text = "View Records Sold";
+            this.viewRecordLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.viewRecordLbl_LinkClicked);
             // 
             // MusicShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(369, 402);
+            this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.ClientSize = new System.Drawing.Size(499, 428);
+            this.Controls.Add(this.viewRecordLbl);
             this.Controls.Add(this.logoutLbl);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panelTopRecords);
@@ -304,9 +305,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox recordsSoldLB;
         private System.Windows.Forms.Button showRecordBtn;
-        private System.Windows.Forms.Label viewTopRecordsLbl;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label logoutLbl;
+        private System.Windows.Forms.LinkLabel logoutLbl;
+        private System.Windows.Forms.LinkLabel viewRecordLbl;
     }
 }
 

@@ -41,9 +41,10 @@
             this.passwordRegister1TB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelRegister = new System.Windows.Forms.Panel();
-            this.backLoginLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.passwordRegister2TB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.backLoginLbl = new System.Windows.Forms.LinkLabel();
             this.panelLogin.SuspendLayout();
             this.panelRegister.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             // panelLogin
             // 
+            this.panelLogin.Controls.Add(this.label5);
             this.panelLogin.Controls.Add(this.label1);
             this.panelLogin.Controls.Add(this.registerBtn);
             this.panelLogin.Controls.Add(this.usernameLoginTB);
@@ -160,6 +162,7 @@
             // 
             // panelRegister
             // 
+            this.panelRegister.BackColor = System.Drawing.Color.LemonChiffon;
             this.panelRegister.Controls.Add(this.backLoginLbl);
             this.panelRegister.Controls.Add(this.label7);
             this.panelRegister.Controls.Add(this.passwordRegister2TB);
@@ -172,16 +175,6 @@
             this.panelRegister.Name = "panelRegister";
             this.panelRegister.Size = new System.Drawing.Size(327, 355);
             this.panelRegister.TabIndex = 7;
-            // 
-            // backLoginLbl
-            // 
-            this.backLoginLbl.AutoSize = true;
-            this.backLoginLbl.Location = new System.Drawing.Point(21, 23);
-            this.backLoginLbl.Name = "backLoginLbl";
-            this.backLoginLbl.Size = new System.Drawing.Size(78, 13);
-            this.backLoginLbl.TabIndex = 8;
-            this.backLoginLbl.Text = "Back to login...";
-            this.backLoginLbl.Click += new System.EventHandler(this.backLoginLbl_Click);
             // 
             // label7
             // 
@@ -200,12 +193,32 @@
             this.passwordRegister2TB.TabIndex = 3;
             this.passwordRegister2TB.UseSystemPasswordChar = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(96, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "New user? Please register";
+            // 
+            // backLoginLbl
+            // 
+            this.backLoginLbl.AutoSize = true;
+            this.backLoginLbl.Location = new System.Drawing.Point(26, 30);
+            this.backLoginLbl.Name = "backLoginLbl";
+            this.backLoginLbl.Size = new System.Drawing.Size(78, 13);
+            this.backLoginLbl.TabIndex = 9;
+            this.backLoginLbl.TabStop = true;
+            this.backLoginLbl.Text = "Back to login...";
+            this.backLoginLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.backLoginLbl_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(346, 382);
+            this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.ClientSize = new System.Drawing.Size(357, 375);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogin);
             this.Name = "LoginForm";
@@ -236,6 +249,7 @@
         private System.Windows.Forms.Panel panelRegister;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox passwordRegister2TB;
-        private System.Windows.Forms.Label backLoginLbl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel backLoginLbl;
     }
 }

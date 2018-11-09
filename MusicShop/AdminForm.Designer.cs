@@ -29,19 +29,16 @@
         private void InitializeComponent()
         {
             this.panelAdminMenu = new System.Windows.Forms.Panel();
-            this.logoutAdminLbl = new System.Windows.Forms.Label();
             this.viewRecordBtn = new System.Windows.Forms.Button();
             this.addRecordBtn = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.deleteRecordBtn = new System.Windows.Forms.Button();
             this.panelAdminDeleteRecord = new System.Windows.Forms.Panel();
-            this.backCPDeleteLbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.recordIdTB = new System.Windows.Forms.TextBox();
             this.deleteRecordPanelBtn = new System.Windows.Forms.Button();
             this.panelAddRecord = new System.Windows.Forms.Panel();
-            this.backCPAddLbl = new System.Windows.Forms.Label();
             this.artistRecordPriceTB = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,8 +49,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelViewRecords = new System.Windows.Forms.Panel();
             this.viewRecordLB = new System.Windows.Forms.ListBox();
-            this.backCPViewlbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.backCPViewlbl = new System.Windows.Forms.LinkLabel();
+            this.backCPDeleteLbl = new System.Windows.Forms.LinkLabel();
+            this.logoutAdminLbl = new System.Windows.Forms.LinkLabel();
+            this.backCPAddLbl = new System.Windows.Forms.LinkLabel();
             this.panelAdminMenu.SuspendLayout();
             this.panelAdminDeleteRecord.SuspendLayout();
             this.panelAddRecord.SuspendLayout();
@@ -71,16 +71,6 @@
             this.panelAdminMenu.Name = "panelAdminMenu";
             this.panelAdminMenu.Size = new System.Drawing.Size(330, 361);
             this.panelAdminMenu.TabIndex = 12;
-            // 
-            // logoutAdminLbl
-            // 
-            this.logoutAdminLbl.AutoSize = true;
-            this.logoutAdminLbl.Location = new System.Drawing.Point(23, 295);
-            this.logoutAdminLbl.Name = "logoutAdminLbl";
-            this.logoutAdminLbl.Size = new System.Drawing.Size(81, 13);
-            this.logoutAdminLbl.TabIndex = 7;
-            this.logoutAdminLbl.Text = "Logout Admin...";
-            this.logoutAdminLbl.Click += new System.EventHandler(this.logoutAdminLbl_Click);
             // 
             // viewRecordBtn
             // 
@@ -134,16 +124,6 @@
             this.panelAdminDeleteRecord.Size = new System.Drawing.Size(330, 361);
             this.panelAdminDeleteRecord.TabIndex = 11;
             // 
-            // backCPDeleteLbl
-            // 
-            this.backCPDeleteLbl.AutoSize = true;
-            this.backCPDeleteLbl.Location = new System.Drawing.Point(18, 292);
-            this.backCPDeleteLbl.Name = "backCPDeleteLbl";
-            this.backCPDeleteLbl.Size = new System.Drawing.Size(117, 13);
-            this.backCPDeleteLbl.TabIndex = 8;
-            this.backCPDeleteLbl.Text = "Back to control panel...";
-            this.backCPDeleteLbl.Click += new System.EventHandler(this.backCPDeleteLbl_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -195,16 +175,6 @@
             this.panelAddRecord.Name = "panelAddRecord";
             this.panelAddRecord.Size = new System.Drawing.Size(330, 361);
             this.panelAddRecord.TabIndex = 10;
-            // 
-            // backCPAddLbl
-            // 
-            this.backCPAddLbl.AutoSize = true;
-            this.backCPAddLbl.Location = new System.Drawing.Point(3, 322);
-            this.backCPAddLbl.Name = "backCPAddLbl";
-            this.backCPAddLbl.Size = new System.Drawing.Size(117, 13);
-            this.backCPAddLbl.TabIndex = 9;
-            this.backCPAddLbl.Text = "Back to control panel...";
-            this.backCPAddLbl.Click += new System.EventHandler(this.backCPAddLbl_Click);
             // 
             // artistRecordPriceTB
             // 
@@ -276,8 +246,8 @@
             // 
             // panelViewRecords
             // 
-            this.panelViewRecords.Controls.Add(this.viewRecordLB);
             this.panelViewRecords.Controls.Add(this.backCPViewlbl);
+            this.panelViewRecords.Controls.Add(this.viewRecordLB);
             this.panelViewRecords.Controls.Add(this.label2);
             this.panelViewRecords.Location = new System.Drawing.Point(9, 12);
             this.panelViewRecords.Name = "panelViewRecords";
@@ -292,16 +262,6 @@
             this.viewRecordLB.Size = new System.Drawing.Size(324, 147);
             this.viewRecordLB.TabIndex = 8;
             // 
-            // backCPViewlbl
-            // 
-            this.backCPViewlbl.AutoSize = true;
-            this.backCPViewlbl.Location = new System.Drawing.Point(23, 295);
-            this.backCPViewlbl.Name = "backCPViewlbl";
-            this.backCPViewlbl.Size = new System.Drawing.Size(119, 13);
-            this.backCPViewlbl.TabIndex = 7;
-            this.backCPViewlbl.Text = "Back to Control Panel...";
-            this.backCPViewlbl.Click += new System.EventHandler(this.backCPViewlbl_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -312,12 +272,56 @@
             this.label2.Text = "View Records";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // backCPViewlbl
+            // 
+            this.backCPViewlbl.AutoSize = true;
+            this.backCPViewlbl.Location = new System.Drawing.Point(21, 312);
+            this.backCPViewlbl.Name = "backCPViewlbl";
+            this.backCPViewlbl.Size = new System.Drawing.Size(119, 13);
+            this.backCPViewlbl.TabIndex = 9;
+            this.backCPViewlbl.TabStop = true;
+            this.backCPViewlbl.Text = "Back to Control Panel...";
+            this.backCPViewlbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.backCPViewlbl_LinkClicked);
+            // 
+            // backCPDeleteLbl
+            // 
+            this.backCPDeleteLbl.AutoSize = true;
+            this.backCPDeleteLbl.Location = new System.Drawing.Point(21, 312);
+            this.backCPDeleteLbl.Name = "backCPDeleteLbl";
+            this.backCPDeleteLbl.Size = new System.Drawing.Size(117, 13);
+            this.backCPDeleteLbl.TabIndex = 9;
+            this.backCPDeleteLbl.TabStop = true;
+            this.backCPDeleteLbl.Text = "Back to control panel...";
+            this.backCPDeleteLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.backCPDeleteLbl_LinkClicked);
+            // 
+            // logoutAdminLbl
+            // 
+            this.logoutAdminLbl.AutoSize = true;
+            this.logoutAdminLbl.Location = new System.Drawing.Point(23, 321);
+            this.logoutAdminLbl.Name = "logoutAdminLbl";
+            this.logoutAdminLbl.Size = new System.Drawing.Size(81, 13);
+            this.logoutAdminLbl.TabIndex = 8;
+            this.logoutAdminLbl.TabStop = true;
+            this.logoutAdminLbl.Text = "Logout Admin...";
+            this.logoutAdminLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutAdminLbl_LinkClicked);
+            // 
+            // backCPAddLbl
+            // 
+            this.backCPAddLbl.AutoSize = true;
+            this.backCPAddLbl.Location = new System.Drawing.Point(19, 325);
+            this.backCPAddLbl.Name = "backCPAddLbl";
+            this.backCPAddLbl.Size = new System.Drawing.Size(119, 13);
+            this.backCPAddLbl.TabIndex = 10;
+            this.backCPAddLbl.TabStop = true;
+            this.backCPAddLbl.Text = "Back to Control Panel...";
+            this.backCPAddLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.backCPAddLbl_LinkClicked);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(349, 387);
+            this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.ClientSize = new System.Drawing.Size(351, 388);
             this.Controls.Add(this.panelViewRecords);
             this.Controls.Add(this.panelAdminDeleteRecord);
             this.Controls.Add(this.panelAdminMenu);
@@ -358,12 +362,12 @@
         private System.Windows.Forms.Button addRecordPanelBtn;
         private System.Windows.Forms.TextBox artistRecordNameTB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label logoutAdminLbl;
-        private System.Windows.Forms.Label backCPDeleteLbl;
         private System.Windows.Forms.Panel panelViewRecords;
         private System.Windows.Forms.ListBox viewRecordLB;
-        private System.Windows.Forms.Label backCPViewlbl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label backCPAddLbl;
+        private System.Windows.Forms.LinkLabel backCPViewlbl;
+        private System.Windows.Forms.LinkLabel logoutAdminLbl;
+        private System.Windows.Forms.LinkLabel backCPDeleteLbl;
+        private System.Windows.Forms.LinkLabel backCPAddLbl;
     }
 }

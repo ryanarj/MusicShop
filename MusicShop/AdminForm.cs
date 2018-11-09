@@ -94,40 +94,6 @@ namespace MusicShop
 
         }
 
-        private void logoutAdminLbl_Click(object sender, EventArgs e)
-        {
-            LoginForm lf = new LoginForm();
-            lf.Show();
-            this.Close();
-        }
-
-        private void backCPAddLbl_Click(object sender, EventArgs e)
-        {
-            foreach (Panel p in listPanel)
-            {
-                p.Visible = false;
-            }
-            panelAdminMenu.Visible = true;
-        }
-
-        private void backCPViewlbl_Click(object sender, EventArgs e)
-        {
-            foreach (Panel p in listPanel)
-            {
-                p.Visible = false;
-            }
-            panelAdminMenu.Visible = true;
-        }
-
-        private void backCPDeleteLbl_Click(object sender, EventArgs e)
-        {
-            foreach (Panel p in listPanel)
-            {
-                p.Visible = false;
-            }
-            panelAdminMenu.Visible = true;
-        }
-
         private void deleteRecordPanelBtn_Click(object sender, EventArgs e)
         {
             string path = parentFolder.FullName;
@@ -180,6 +146,40 @@ namespace MusicShop
                 p.Visible = false;
             }
             panelViewRecords.Visible = true;
+        }
+
+        private void logoutAdminLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Close();
+        }
+
+        private void backCPViewlbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            foreach (Panel p in listPanel)
+            {
+                p.Visible = false;
+            }
+            panelAdminMenu.Visible = true;
+        }
+
+        private void backCPDeleteLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            foreach (Panel p in listPanel)
+            {
+                p.Visible = false;
+            }
+            panelAdminMenu.Visible = true;
+        }
+
+        private void backCPAddLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            foreach (Panel p in listPanel)
+            {
+                p.Visible = false;
+            }
+            panelAdminMenu.Visible = true;
         }
     }
 }

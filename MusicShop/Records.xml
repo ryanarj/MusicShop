@@ -7,15 +7,15 @@
     <recId>76523</recId>
   </Record>
   <Record>
-    <artist>Nas</artist>
-    <recordName>Nas</recordName>
-    <price>12.00</price>
-    <recId>10438</recId>
+    <artist>Jay Z</artist>
+    <recordName>Blueprint</recordName>
+    <price>11.00</price>
+    <recId>87847</recId>
   </Record>
   <Record>
-    <artist>AA</artist>
-    <recordName>A</recordName>
-    <price>10.00</price>
-    <recId>19042</recId>
+    <artist>Kendrick Lamar</artist>
+    <recordName>Damn</recordName>
+    <price>12.00</price>
+    <recId>11614</recId>
   </Record>
 </root>

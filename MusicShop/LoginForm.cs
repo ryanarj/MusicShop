@@ -120,7 +120,7 @@ namespace MusicShop
             }
         }
 
-        private void backLoginLbl_Click(object sender, EventArgs e)
+        private void backLoginLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             foreach (Panel p in listPanel)
             {
